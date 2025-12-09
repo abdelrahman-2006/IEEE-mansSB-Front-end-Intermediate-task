@@ -18,8 +18,18 @@ let isValid = [false , false, false];
 
 mainContainer.addEventListener("click",(e)=>{
     if(e.target.tagName == 'BUTTON') {
-        if(e.target.id == 'reset') {
-            // reset function
+        if(e.target.id == 'reset-button') {
+            if(billAmount.value !== "") {
+                resetBill()
+            }
+            if(customPercentage.value !== "" || isValid[1]){
+                resetTip();
+            }
+            if(indvidualCount.value !== ""){
+                resetNumberOfPeople()
+            }
+            calculateTipPerPerson()
+            calculateTotalPerPerson()
         }else {
             resetTip();
             tipPercentage = Number(e.target.id);
