@@ -27,17 +27,17 @@ input[type=number]::-webkit-outer-spin-button {
 html {
     padding: none;
     margin: none;
-    -webkit-user-select: none; /* Safari */
-    -ms-user-select: none; /* IE 10 and IE 11 */
+    -webkit-user-select: none; 
+    -ms-user-select: none;
     user-select: none; 
 }
 body {
     min-height: 98vh;
-    background-color: #181818;
-    color: #F02F34;
+    background-color: #c5e4e7 ;
+    color: #416667;
     display: grid;
     justify-content: center;
-    grid-template-rows: 1.5fr 2fr 1fr;
+    grid-template-rows: 1.25fr 2fr 1fr;
     font-family: 'inter' , sans-serif , Arial;
     line-height: 1.5;
 }
@@ -48,13 +48,12 @@ header {
 }
 input {
     border: none;
-    background-color: #181818;
-    color: #F02F34;
+    background-color: #f3f8fb;
+    color: #416667;
     transition: 30ms;
-    caret-color: transparent;
 }
 input::placeholder {
-    color: #F02F34;
+    color: #a3b7b7;
 }
 .main-inputs {
     text-align: end;
@@ -64,23 +63,25 @@ input::placeholder {
     font-size: 2rem;
 }
 main {
-    background-color: #F02F34;
-    color: #181818;
+    background-color: #fff;
     border-radius: 15px;
-    padding: 1rem;
+    padding: 2rem;
     display: grid;
     grid-template-columns: repeat(auto-fit,minmax(48%,1fr));
     gap: 2rem;
+    align-items: center;
     max-width: 100vw;
     width: 50rem;
 }
 button {
-    background-color: #181818;
+    background-color: #00474b;
     border-radius: 10px;
     border: none;
-    color: #F02F34;
+    color: #f5fffe;
     transition-duration: 250ms;
     padding: 0.25rem;
+    align-self: flex-start;
+    min-height: 2rem;
 }
 #Custom-percentage {
     width: 100%;
@@ -102,16 +103,16 @@ section {
     height: 15%;
 }
 #reset-button {
-    background-color: #F02F34;
+    background-color: #08686d;
     font-size: 1rem;
     width: 100%;
     height: 100%;
-    color: #181818;
+    color: #578689;
     font-weight: 700;
 }
 #outputs {
-    background-color: #181818;
-    color: #F02F34;
+    background-color: #00474b;
+    color: #f5fffe;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -131,8 +132,9 @@ section {
     gap:1rem;
 }
 .per-person {
-    font-size: 0.75rem;
-    font-weight: 200;
+    font-size: 1rem;
+    font-weight: 400;
+    color: #578689;
 }
 
 .inputs {
@@ -140,37 +142,69 @@ section {
     padding: none;
     margin: none;
     position: relative;
+    color: #869492;
 }
 .label {
     font-size: 1.5rem;
 }
 #tip-selection {
-    margin-bottom: 2rem;
+    margin:3rem 0;
 }
 .cost {
     font-size: 2rem;
+    color: #22baa5;
 }
 .input-icon {
     position: absolute;
-    color: #ff8185;
+    color: #a3b7b7;
     margin-top: 10px;
     margin-left: 5px;
     font-style: none;
     font-size: 1rem;
     font-weight: 200;
 }
-button:hover {
-    transform: scale(1.1);
+button:hover , #reset-button:hover {
     cursor: pointer;
+    background-color: #9febdf;
+    color: #00474b;
 }
+
 button:active {
     transform: scale(0.95);
+}
+input:focus {
+    outline: 3px solid #bcf2ee;
+    color: #00474b;
 }
 input:hover {
     cursor: pointer;
 }
-input:focus {
-    background-color: #F02F34;
-    outline: thick solid #181818;
-    color: #181818;
+footer {
+    text-align: center;
+    align-self: flex-end;
+    font-size: 2rem;
+}
+.github {
+    cursor: pointer;
+}
+#selection-grid input::placeholder {
+    color: #627c7b;
+}
+#inputs {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.input-header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+/*styling error elelment when it's not empty*/
+.error {
+    color: red;
+    font-size: 0.75rem;
+    font-weight: 500;
+    align-self: flex-end;
 }

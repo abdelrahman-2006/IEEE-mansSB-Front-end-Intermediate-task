@@ -5,65 +5,124 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-
     <link rel="stylesheet" href="styles.css">
     <title>Tip splitter</title>
 </head>
 <body>
+    <script src="main.js" defer></script>
+
     <header>
         <h1>SPLI<br>TTER</h1>
     </header>
+
     <main>
+
         <section id="inputs">
+
             <div id="bill" class="inputs">
+
                 <label class="label" for="bill-amount">
-                    <div class="label">Bill</div>
+
+                    <div class="input-header">
+
+                        <div class="label">Bill</div>
+                        <div id="Bill-error" class="error"></div>
+
+                    </div>
+
                     <i class="fa-solid fa-dollar-sign input-icon"></i>
                     <input class="main-inputs" id="bill-amount" placeholder="0" type="number" required >
+
                 </label>
+
             </div>
+
             <div id="tip-selection" class="inputs">
-                <div class="label">Select Tip %</div>
-                <div id="selection-grid">
-                    <button id="5">5</button>
-                    <button id="10">10</button>
-                    <button id="15">15</button>
-                    <button id="25">25</button>
-                    <button id="50">50</button>
-                    <input id="Custom-percentage" type="number" placeholder="Custom">
+
+                <div class="input-header">
+
+                    <div class="label">Select Tip %</div>
+                    <div class="error" id="percentage-error"></div>
+
                 </div>
+
+                <div id="selection-grid">
+
+                    <button id="5">5%</button>
+                    <button id="10">10%</button>
+                    <button id="15">15%</button>
+                    <button id="25">25%</button>
+                    <button id="50">50%</button>
+                    <input id="Custom-percentage" type="number" placeholder="Custom">
+
+                </div>
+
             </div>
             <div id="individuals" class="inputs">
+
                 <label class="label" for="individual-count">
-                    <div class="label">Number of People</div>
+
+                    <div class="input-header">
+
+                        <div class="label">Number of People</div>
+                        <div class="error" id="individual-error"></div>
+
+                    </div>
+
                     <i class="fa-regular fa-user input-icon"></i>
                     <input class="main-inputs" id="individual-count" placeholder="0" type="number" required >
+
                 </label>
+
             </div>
+
         </section>
+
         <section id="outputs">
+
                 <div id="results">
                     <div class="result">
+
                         <div class="output-category">
+
                             <div class="paid-amount">Tip Amount</div>
                             <div class="per-person">/ person</div>
+
                         </div>
-                        <div class="cost"><i class="fa-solid fa-dollar-sign"></i>0.00</div>
+
+                        <div class="cost"><i class="fa-solid fa-dollar-sign"></i><span id="tip-per-person">0.00</spans></div>
+
                     </div>
+
                     <div class="result">
+
                         <div class="output-category">
+
                             <div class="paid-amount">Total</div>
                             <div class="per-person">/ person</div>
+
                         </div>
-                        <div class="cost"><i class="fa-solid fa-dollar-sign"></i>0.00</div>
+
+                        <div class="cost"><i class="fa-solid fa-dollar-sign"></i><span id="total-per-person">0.00</span></div>
+
                     </div>
+
                 </div>
+
                 <div id="reset">
+
                     <button id="reset-button">RESET</button>
+
                 </div>
+
             </div>
+
         </section>
+
     </main>
-    <footer></footer>
+
+    <footer>
+        Created by abdelrahman-2006 <a><i class="fa-brands fa-github github"></i></a>
+    </footer>
 </body>
 </html>
